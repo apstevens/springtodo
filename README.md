@@ -2,7 +2,13 @@
 
 ## Table of Contents
 
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies_Used](#technologies-used)
+
 ## Introduction
+
+The Todo List Application is a simple RESTful web service built with Spring Boot. It allows users to add, retrieve, and update tasks. The project demonstrates basic CRUD operations and includes API documentation using OpenAPI/Swagger.
 
 ## Features
 
@@ -11,7 +17,7 @@
 - Retrieve a task by ID
 - Update existing tasks
 
-Technologies Used
+## Technologies Used
 
 - Java
 - Spring Boot
