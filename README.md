@@ -175,6 +175,6 @@ git push origin feature/YourFeature
 
 ## Contact
 
-- **Andy Stevens** - apstevens79@gmail.com
+- **Andy Stevens** - apstevens@shayledesignsolutions.co.uk
 - https://github.com/apstevens/springtodo
  
