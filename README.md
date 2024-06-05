@@ -66,6 +66,29 @@ The API is documented using OpenAPI/Swagger. You can view the documentation by a
 
 - [Swagger_UI](http://localhost:8080/swagger-ui.html)
 
+**Example End Points**
+- Get all tasks
+```
+GET /tasks/all
+
+```
+- Get a task by ID
+```
+GET /tasks/{id}
+```
+- Add a new task
+```
+POST /tasks
+```
+```
+{
+    "id": 1,
+    "task": "Simple task",
+    "description": "Simple task description"
+}
+```
+
+
 
 
  
