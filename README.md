@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies_Used](#technologies-used)
+- [Prerequisites](#prerequisites)
 
 ## Introduction
 
@@ -30,5 +31,41 @@ The Todo List Application is a simple RESTful web service built with Spring Boot
 
 Java 8 or higher
 Maven
+
+## Installation
+
+1. Clone the repository
+
+```
+git clone https://github.com/yourusername/todolist.git
+cd todolist
+
+```
+
+2. Build the project using Maven
+
+```
+mvn clean install
+
+```
+## Running the application
+
+1. Run the spring boot application
+
+```
+mvn spring-boot:run
+
+```
+
+2. Access the API documentation
+    - Open your web browser and navigate to http://localhost:8080/swagger-ui.html to access the Swagger UI.
+
+## API Documentation
+
+The API is documented using OpenAPI/Swagger. You can view the documentation by accessing the following URL after running the application:
+
+- [Swagger_UI](http://localhost:8080/swagger-ui.html)
+
+
 
  
