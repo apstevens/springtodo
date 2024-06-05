@@ -87,6 +87,8 @@ POST /tasks
     "description": "Simple task description"
 }
 ```
+## Project Structure
+
 ```
 ├── SpringToDo
 │   ├── .vscode
