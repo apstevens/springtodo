@@ -87,6 +87,70 @@ POST /tasks
     "description": "Simple task description"
 }
 ```
+```
+├── SpringToDo
+│   ├── .vscode
+│   │   └── settings.json
+│   ├── springtodo
+│   │   ├── .gitattributes
+│   │   └── README.md
+│   └── todolist
+│       ├── .mvn
+│       │   └── wrapper
+│       │       └── maven-wrapper.properties
+│       ├── .vscode
+│       │   └── NEWLY_CREATED_BY_SPRING_INITIALIZR
+│       ├── src
+│       │   ├── main
+│       │   │   ├── java
+│       │   │   │   └── com
+│       │   │   │       └── shaylesolutions
+│       │   │   │           └── todolist
+│       │   │   │               ├── Controller
+│       │   │   │               │   └── TaskController.java
+│       │   │   │               ├── Model
+│       │   │   │               │   └── Task.java
+│       │   │   │               ├── Repository
+│       │   │   │               │   └── TaskRepository.java
+│       │   │   │               ├── Service
+│       │   │   │               │   ├── TaskService.java
+│       │   │   │               │   └── TaskServiceImpl.java
+│       │   │   │               └── TodolistApplication.java
+│       │   │   └── resources
+│       │   │       └── application.properties
+│       │   └── test
+│       │       └── java
+│       │           └── com
+│       │               └── shaylesolutions
+│       │                   └── todolist
+│       │                       └── TodolistApplicationTests.java
+│       ├── target
+│       │   ├── classes
+│       │   │   ├── com
+│       │   │   │   └── shaylesolutions
+│       │   │   │       └── todolist
+│       │   │   │           ├── Controller
+│       │   │   │           │   └── TaskController.class
+│       │   │   │           ├── Model
+│       │   │   │           │   └── Task.class
+│       │   │   │           ├── Repository
+│       │   │   │           │   └── TaskRepository.class
+│       │   │   │           ├── Service
+│       │   │   │           │   ├── TaskService.class
+│       │   │   │           │   └── TaskServiceImpl.class
+│       │   │   │           └── TodolistApplication.class
+│       │   │   └── application.properties
+│       │   └── test-classes
+│       │       └── com
+│       │           └── shaylesolutions
+│       │               └── todolist
+│       │                   └── TodolistApplicationTests.class
+│       ├── .gitignore
+│       ├── HELP.md
+│       ├── mvnw
+│       ├── mvnw.cmd
+│       └── pom.xml
+```
 
 
 
