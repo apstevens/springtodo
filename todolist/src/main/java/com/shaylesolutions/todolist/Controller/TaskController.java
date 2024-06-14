@@ -34,8 +34,7 @@ public class TaskController {
     private TaskService taskService;
 
     @Operation(summary = "Retrieves tasks", description = "Provides a list of all tasks")
-    @ApiResponse(responseCode = "200", description = "Successful retrieval of tasks",
-        content = @Content(array = @ArraySchema(schema = @Schema(implementation = Task.class))))
+    @ApiResponse(responseCode = "200", description = "Successful retrieval of tasks", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Task.class))))
     @GetMapping(value = "/task/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Task>> getTasks() {
         List<Task> tasks = taskService.getTasks();
@@ -43,10 +42,8 @@ public class TaskController {
     }
 
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Successful retrieval of tasks", 
-        content = @Content(array = @ArraySchema(schema = @Schema(implementation = Task.class)))),
-        @ApiResponse(responseCode = "404", description = "Task cannot be found/doesn't exist",
-        content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of tasks", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Task.class)))),
+            @ApiResponse(responseCode = "404", description = "Task cannot be found/doesn't exist", content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
     })
     @Operation(summary = "Retrieves task based on ID", description = "Returns a task based on ID")
     @GetMapping(value = "/task/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -56,10 +53,8 @@ public class TaskController {
     }
 
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "400", description = "Bad request: unsuccessful update", content = 
-            @Content(schema = 
-            @Schema(implementation = ErrorResponse.class))),
-        @ApiResponse(responseCode = "201", description = "Successful creation of task"),
+            @ApiResponse(responseCode = "400", description = "Bad request: unsuccessful update", content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
+            @ApiResponse(responseCode = "201", description = "Successful creation of task"),
     })
     @Operation(summary = "Create Task", description = "Creates a task from the provided payload")
     @PostMapping(value = "/task", produces = MediaType.APPLICATION_JSON_VALUE)

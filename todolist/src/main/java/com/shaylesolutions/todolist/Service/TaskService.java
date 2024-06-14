@@ -6,7 +6,9 @@ import com.shaylesolutions.todolist.Model.Task;
 
 public interface TaskService {
     Task getTaskById(int id);
+
     void addTask(Task task);
+
     List<Task> getTasks();
-    
+
 }

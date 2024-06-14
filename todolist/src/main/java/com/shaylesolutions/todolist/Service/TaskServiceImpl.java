@@ -13,7 +13,7 @@ import com.shaylesolutions.todolist.Repository.TaskRepository;
 
 @Service
 public class TaskServiceImpl implements TaskService {
-    
+
     @Autowired
     private TaskRepository taskRepository;
 
@@ -32,13 +32,12 @@ public class TaskServiceImpl implements TaskService {
         return taskRepository.getTasks();
     }
 
-
     private int findIndexById(int id) {
         List<Task> tasks = taskRepository.getTasks();
         OptionalInt indexOpt = IntStream.range(0, tasks.size())
-            .filter(i -> tasks.get(i).getId() == id)
-            .findFirst();
+                .filter(i -> tasks.get(i).getId() == id)
+                .findFirst();
         return indexOpt.orElse(-1); // Return -1 if the ID is not found
     }
-    
+
 }
