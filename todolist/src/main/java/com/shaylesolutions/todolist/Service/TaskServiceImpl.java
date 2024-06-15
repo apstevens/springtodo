@@ -32,6 +32,10 @@ public class TaskServiceImpl implements TaskService {
         return taskRepository.getTasks();
     }
 
+    public Task updateTask(int id, Task task) {
+        return taskRepository.updateTask(id, task);
+    }
+
     private int findIndexById(int id) {
         List<Task> tasks = taskRepository.getTasks();
         OptionalInt indexOpt = IntStream.range(0, tasks.size())

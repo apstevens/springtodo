@@ -24,4 +24,15 @@ public class TaskRepository {
         tasks.add(task);
     }
 
+    public Task updateTask(int id, Task updatedTask) {
+        for (Task task : tasks) {
+            if (task.getId() == id) {
+                task.setTask(updatedTask.getTask());
+                task.setDescription(updatedTask.getDescription());
+                return task;
+            }
+        }
+        return null;
+    }
+
 }
