@@ -11,4 +11,6 @@ public interface TaskService {
 
     List<Task> getTasks();
 
+    Task updateTask(int id, Task task);
+
 }

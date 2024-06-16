@@ -25,6 +25,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 @RestController
 @Tag(name = "Task Controller", description = "Add, retrieve and update tasks")
@@ -50,6 +52,15 @@ public class TaskController {
     public ResponseEntity<Task> getTask(@PathVariable int id) {
         Task task = taskService.getTaskById(id);
         return new ResponseEntity<>(task, HttpStatus.OK);
+    }
+
+    @PutMapping("/task/{id}")
+    public ResponseEntity<Task> updateTask(@PathVariable int id, @Valid @RequestBody Task task) {
+        Task updatedTask = taskService.updateTask(id, task);
+        if (updatedTask == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(updatedTask, HttpStatus.OK);
     }
 
     @ApiResponses(value = {
